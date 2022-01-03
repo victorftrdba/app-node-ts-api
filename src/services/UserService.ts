@@ -53,7 +53,9 @@ class UserService {
         .update(User)
         .set({ name, email })
         .where("id = :id", { id })
-        .execute();
+            .execute();
+        
+        return updateUser;
     }
 }
 
